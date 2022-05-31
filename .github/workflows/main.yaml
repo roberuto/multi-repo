@@ -1,5 +1,8 @@
 name: Multi-repo TEST
-on: [push]
+on:
+  pull_request:
+    branches:
+      - '*'
 env:
   ENVIRONMENT: staging
 jobs:

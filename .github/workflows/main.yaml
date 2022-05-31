@@ -1,0 +1,13 @@
+name: Multi-repo TEST
+on: [push]
+env:
+  ENVIRONMENT: staging
+jobs:
+  fun-job:
+    name: The Job Name
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Echo ${{ env.ENVIRONMENT }}
+      run: echo ${{ env.ENVIRONMENT }}
